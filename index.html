@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="key, words" />
+<meta name="author" content="Bawyka Taras" />
+<link type="text/css" rel="stylesheet" href="public/css/style.css" media="all" />
+<link href="favicon.ico" rel="icon" type="image/x-icon" />
+<script type="text/javascript" src="public/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	var deg = 0,  i = $('.sp').length-1, l = $('.sp').size(), way="low", o = 1;
+		
+	$(document).keypress(function(e){
+		
+		if (e.which == 119) 
+		{
+			way="high";
+		}
+		
+		if (e.which == 115)
+		{
+			way="low";
+		}
+		
+		if (i<0) way = "high";
+		if (i==l) way = "low";
+		
+		$('.sp:eq('+i+')').animate({'opacity':o},500);
+		
+		if (way=="low")
+		{
+			i--;
+			o = 1;
+			deg-=5;
+			
+		}
+		
+		if (way=="high")
+		{
+			i++;
+			o = 0;
+			deg+=5;
+		}
+		
+		$('#regulator').css({
+			'-webkit-transform':'rotate('+deg+'deg)',
+			'-moz-transform':'rotate('+deg+'deg)',
+			'transform':'rotate('+deg+'deg)',
+			'-o-transform':'rotate('+deg+'deg)'
+		});
+	
+	});
+	
+	$('#regulator').click(function(){
+	
+		if (i<0) way = "high";
+		if (i==l) way = "low";
+			
+		$('.sp:eq('+i+')').animate({'opacity':o},500);
+											
+		if (way=="low")
+		{
+			i--;
+			o = 1;
+			deg-=5;
+			
+		}
+		
+		if (way=="high")
+		{
+			i++;
+			o = 0;
+			deg+=5;
+		}
+				
+		$(this).css({
+			'-webkit-transform':'rotate('+deg+'deg)',
+			'-moz-transform':'rotate('+deg+'deg)',
+			'transform':'rotate('+deg+'deg)',
+			'-o-transform':'rotate('+deg+'deg)'
+		});
+			
+	});
+
+});
+</script>
+<title>Gromkost </title>
+<style>
+* { margin: 0; padding: 0; }
+html,body { width: 100%; height: 100%; background: #fff; }
+.whole { position: absolute; z-index: 1; }
+#regulator { position: absolute; z-index: 2; left: 527px; top:300px; cursor: pointer; }
+.sp { width: 14px; height: 14px; background: #505050; position: absolute; display: block; border-radius: 8px; z-index: 3; 
+-moz-border-radius: 8px;
+-webkit-border-radius: 8px;
+-o-border-radius: 8px;
+opacity: 0;
+}
+.current { }
+.s1 { left: 473px; top: 597px; }
+.s2 { left: 463px; top: 572px; }
+.s3 { left: 456px; top: 545px; }
+.s4 { left: 451px; top: 518px; }
+.s5 { left: 450px; top: 490px; }
+.s6 { left: 452px; top: 463px; }
+.s7 { left: 455px; top: 436px; }
+.s8 { left: 463px; top: 410px; }
+.s9 { left: 472px; top: 385px; }
+.s10 { left: 485px; top: 360px; }
+.s11 { left: 500px; top: 336px; }
+.s12 { left: 517px; top: 315px; }
+.s13 { left: 537px; top: 296px; }
+.s14 { left: 558px; top: 280px; }
+.s15 { left: 581px; top: 265px; }
+.s16 { left: 605px; top: 252px; }
+.s17 { left: 631px; top: 242px; }
+.s18 { left: 658px; top: 235px; }
+.s19 { left: 685px; top: 230px; }
+.s20 { left: 712px; top: 229px; }
+.s21 { left: 739px; top: 230px; }
+.s22 { left: 766px; top: 234px; }
+.s23 { left: 793px; top: 241px; }
+.s24 { left: 819px; top: 251px; }
+.s25 { left: 843px; top: 263px; }
+.s26 { left: 865px; top: 280px; }
+.s27 { left: 887px; top: 295px; }
+.s28 { left: 906px; top: 315px; }
+.s29 { left: 923px; top: 337px; }
+.s30 { left: 939px; top: 359px; }
+.s31 { left: 950px; top: 384px; }
+.s32 { left: 960px; top: 410px; }
+.s33 { left: 968px; top: 436px; }
+.s34 { left: 971px; top: 463px; }
+.s35 { left: 973px; top: 490px; }
+</style>
+</head>
+<body>
+<span class="sp s1"></span>
+<span class="sp s2"></span>
+<span class="sp s3"></span>
+<span class="sp s4"></span>
+<span class="sp s5"></span>
+<span class="sp s6"></span>
+<span class="sp s7"></span>
+<span class="sp s8"></span>
+<span class="sp s9"></span>
+<span class="sp s10"></span>
+<span class="sp s11"></span>
+<span class="sp s12"></span>
+<span class="sp s13"></span>
+<span class="sp s14"></span>
+<span class="sp s15"></span>
+<span class="sp s16"></span>
+<span class="sp s17"></span>
+<span class="sp s18"></span>
+<span class="sp s19"></span>
+<span class="sp s20"></span>
+<span class="sp s21"></span>
+<span class="sp s22"></span>
+<span class="sp s23"></span>
+<span class="sp s24"></span>
+<span class="sp s25"></span>
+<span class="sp s26"></span>
+<span class="sp s27"></span>
+<span class="sp s28"></span>
+<span class="sp s29"></span>
+<span class="sp s30"></span>
+<span class="sp s31"></span>
+<span class="sp s32"></span>
+<span class="sp s33"></span>
+<span class="sp s34"></span>
+<span class="sp s35"></span>
+
+<img src="public/img/krutit.png" id="regulator">
+<img src="public/img/regulator.jpg" class="whole">
+</body>
+</html>
